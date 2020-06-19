@@ -10,24 +10,40 @@ body {
   font-weight: 300;
 }
 
-@media screen and (max-width: 375px) {
-  .testimonial-image-section {
+@media screen and (min-width: 320px) and (max-width: 700px) {
+  .testimonial {
     padding: 30px;
+    padding: 10px;
+    background-image: url("./images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-size: 80vw;
+  }
+
+  .footer {
+    display: none;
+    z-index: -1;
+  }
+
+  .testimonial-image-section {
+    padding: 40px;
+    background-image: url("./images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    display: block;
   }
   .testimonial-image-section .img-bg img {
-    z-index: -1;
-    width: 300px;
-    width: 100%;
+    display: none;
   }
 
   .testimonial-image-section .testimonial-image {
     box-shadow: 10px 15px 50px rgba(71, 51, 51, 0.3);
+    max-width: 95%;
+    height: auto;
     margin: 0 auto;
     display: block;
-    position: relative;
-    top: -280px;
-    width: 250px;
-    height: 250px;
   }
 
   .attribution {
@@ -45,13 +61,13 @@ body {
   }
 
   .testimonial-nav-buttons {
-    height: 35px;
-    width: 70px;
+    height: 8vh;
+    width: 18vw;
     border-radius: 30px;
     background-color: white;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     position: relative;
-    bottom: 300px;
+    bottom: 20px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -83,30 +99,26 @@ body {
     background-color: lightgray;
   }
 
-  .bottom img {
-    width: 250px;
-  }
-
   .testimonial-text {
     max-width: 28ch;
-    position: relative;
-    font-size: 1rem;
+    font-size: 5vw;
     text-align: center;
     margin: 0 auto;
-    top: -325px;
     line-height: 1.5;
+    position: relative;
+    bottom: 65px;
   }
 
   .testimonial-text .student-name,
   .testimonial-text .student-role {
-    font-size: 14px;
+    font-size: 3.5vw;
     position: relative;
     top: 10px;
     display: block;
   }
 
   .testimonial-text .student-name {
-    font-weight: 800;
+    font-weight: 700;
   }
 
   .testimonial-text .student-role {
@@ -114,21 +126,22 @@ body {
   }
 
   .testimonial-text .quotes {
-    z-index: -1;
     position: relative;
     top: 1.8em;
   }
 
   .testimonial-text .quotes img {
-    height: 40px;
+    height: 10vh;
   }
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 701px) {
   .testimonial {
     margin: 0 auto;
-    display: block;
+    background-image: url("./images/pattern-curve.svg");
+    background-position: left bottom;
   }
+
   .testimonial-text {
     max-width: 32ch;
     position: absolute;
@@ -152,7 +165,7 @@ body {
   }
 
   .testimonial-text .student-name {
-    font-weight: 800;
+    font-weight: 700;
   }
 
   .testimonial-text .student-role {
@@ -168,6 +181,9 @@ body {
   }
 
   .testimonial-image-section .testimonial-image {
+    background-image: url("./images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     position: absolute;
     box-shadow: 10px 15px 50px rgba(71, 51, 51, 0.3);
     top: 3em;
@@ -187,6 +203,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: 1;
+  }
+
+  .footer {
+    z-index: -1;
   }
 
   .prev_btn {
