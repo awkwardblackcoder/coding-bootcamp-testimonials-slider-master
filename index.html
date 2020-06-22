@@ -22,26 +22,43 @@
   <body>
     <main id="app" class="testimonial">
       <div class="testimonial-image-section">
-        <span class="img-bg"><img src="./images/pattern-bg.svg" /></span>
-        <img class="testimonial-image" :src="students[currentIndex].imageUrl" />
+        <span class="img-bg"
+          ><img src="./images/pattern-bg.svg" alt="pattern-bg"
+        /></span>
+        <img
+          class="testimonial-image"
+          :src="students[currentIndex].imageUrl"
+          alt="student image"
+        />
         <span class="testimonial-nav-buttons">
-          <button class="prev_btn" @click="prevReview"></button>
-          <button class="next_btn" @click="nextReview"></button>
+          <button
+            class="prev_btn"
+            @click="prevReview"
+            aria-label="previous review"
+          ></button>
+          <button
+            class="next_btn"
+            @click="nextReview"
+            aria-label="next review"
+          ></button>
         </span>
       </div>
       <div class="testimonial-text">
-        <span class="quotes"><img src="./images/pattern-quotes.svg" /></span>
+        <span class="quotes"
+          ><img src="./images/pattern-quotes.svg" alt="pattern quotes"
+        /></span>
         <p>{{students[currentIndex].review}}</p>
-        <section class="student">
+        <div class="student">
           <span class="student-name">{{students[currentIndex].student}}</span>
           <span class="student-role">{{students[currentIndex].role}}</span>
-        </section>
+        </div>
       </div>
       <div>
         <img
           class="footer"
           style="position: fixed; bottom: 0px;"
           src="./images/pattern-curve.svg"
+          alt="footer image"
         />
       </div>
 
