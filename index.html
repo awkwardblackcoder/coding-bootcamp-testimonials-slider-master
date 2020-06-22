@@ -21,29 +21,29 @@
   </head>
   <body>
     <main id="app" class="testimonial">
-      <section class="testimonial-image-section">
+      <div class="testimonial-image-section">
         <span class="img-bg"><img src="./images/pattern-bg.svg" /></span>
         <img class="testimonial-image" :src="students[currentIndex].imageUrl" />
         <span class="testimonial-nav-buttons">
           <button class="prev_btn" @click="prevReview"></button>
           <button class="next_btn" @click="nextReview"></button>
         </span>
-      </section>
-      <section class="testimonial-text">
+      </div>
+      <div class="testimonial-text">
         <span class="quotes"><img src="./images/pattern-quotes.svg" /></span>
         <p>{{students[currentIndex].review}}</p>
         <section class="student">
           <span class="student-name">{{students[currentIndex].student}}</span>
           <span class="student-role">{{students[currentIndex].role}}</span>
         </section>
-      </section>
-      <section>
+      </div>
+      <div>
         <img
           class="footer"
           style="position: fixed; bottom: 0px;"
           src="./images/pattern-curve.svg"
         />
-      </section>
+      </div>
 
       <div class="attribution bottom">
         Challenge by
